@@ -6,12 +6,36 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "tsx --test tests/**/*.test.ts"
   },
   "dependencies": {
-    "next": "16.3.4",
+    "@codemirror/lang-css": "^6.3.1",
+    "@codemirror/lang-html": "^6.4.12",
+    "@codemirror/lang-javascript": "^6.2.5",
+    "@codemirror/lang-json": "^6.0.2",
+    "@types/dompurify": "^3.0.5",
+    "@types/js-yaml": "^4.0.9",
+    "@types/jsbarcode": "^3.11.4",
+    "@uiw/react-codemirror": "^4.25.11",
+    "browser-image-compression": "^2.0.2",
+    "clsx": "^2.1.1",
+    "dompurify": "^3.4.17",
+    "fuse.js": "^7.5.0",
+    "hash-wasm": "^4.12.0",
+    "html5-qrcode": "^2.3.8",
+    "js-yaml": "^5.5.0",
+    "jsbarcode": "^3.12.3",
+    "jszip": "^3.10.1",
+    "lucide-react": "^1.39.0",
+    "motion": "^13.1.1",
+    "next": "16.4.3",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.3.289",
+    "qrcode.react": "^4.2.0",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-dropzone": "^20.1.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -19,8 +43,9 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.4",
+    "eslint-config-next": "16.4.3",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
