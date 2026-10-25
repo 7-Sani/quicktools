@@ -56,7 +56,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
 
         {/* Links */}
-        <div className="flex-1 overflow-y-auto p-4">
+        <div className="flex-1 overflow-y-auto p-4 flex flex-col justify-between">
           <div className="flex flex-col gap-2">
             {MENU_LINKS.map((link) => {
               const Icon = link.icon;
@@ -72,6 +72,24 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 </Link>
               );
             })}
+          </div>
+
+          <div className="pt-4 border-t-2 border-border mt-4 flex items-center justify-center gap-3 text-xs text-text-secondary">
+            <Link
+              href="/privacy"
+              onClick={onClose}
+              className="hover:text-text hover:underline transition-colors font-medium"
+            >
+              Privacy Policy
+            </Link>
+            <span>•</span>
+            <Link
+              href="/terms"
+              onClick={onClose}
+              className="hover:text-text hover:underline transition-colors font-medium"
+            >
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>

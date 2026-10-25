@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { Shield, Zap, Lock, Heart } from "lucide-react";
+import Link from "next/link";
+import { Shield, Zap, Lock, Heart, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
       <h1 className="font-heading text-3xl sm:text-4xl font-bold uppercase tracking-tight mb-4">
         About QuickTools
       </h1>
@@ -64,6 +65,33 @@ export default function AboutPage() {
             <p className="text-sm text-text-secondary">{item.desc}</p>
           </div>
         ))}
+      </div>
+
+      {/* Legal & Policies */}
+      <div className="neo-card p-8 mb-8">
+        <div className="flex items-center gap-3 mb-3">
+          <FileText size={22} className="text-accent" />
+          <h2 className="font-heading text-xl font-bold uppercase tracking-tight">
+            Policies & Terms
+          </h2>
+        </div>
+        <p className="text-text-secondary mb-4 leading-relaxed text-sm">
+          We maintain transparent policies and straightforward terms to protect your privacy and ensure open access to our utility services.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/privacy"
+            className="px-4 py-2 neo-border rounded-lg bg-surface hover:bg-accent hover:text-white font-semibold text-sm transition-colors"
+          >
+            Privacy Policy &rarr;
+          </Link>
+          <Link
+            href="/terms"
+            className="px-4 py-2 neo-border rounded-lg bg-surface hover:bg-accent hover:text-white font-semibold text-sm transition-colors"
+          >
+            Terms of Service &rarr;
+          </Link>
+        </div>
       </div>
 
       {/* Contact */}

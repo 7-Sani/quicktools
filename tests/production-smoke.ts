@@ -58,6 +58,8 @@ async function runProductionSmokeTests() {
   const coreRoutes = [
     { id: "CORE-01", path: "/", name: "Homepage" },
     { id: "CORE-02", path: "/about", name: "About Page" },
+    { id: "CORE-02B", path: "/privacy", name: "Privacy Page" },
+    { id: "CORE-02C", path: "/terms", name: "Terms Page" },
     { id: "CORE-03", path: "/categories", name: "Categories Hub" },
     { id: "CORE-04", path: "/popular", name: "Popular Tools" },
     { id: "CORE-05", path: "/recent", name: "Recent Tools" },

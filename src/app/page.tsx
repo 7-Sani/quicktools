@@ -174,6 +174,15 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/privacy"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
+            >
+              Learn more in our Privacy Policy &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 
