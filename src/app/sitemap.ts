@@ -3,7 +3,7 @@ import { TOOLS } from "@/config/tools";
 import { CATEGORIES } from "@/config/categories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://quicktools.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://allquicktools.netlify.app";
 
   const toolUrls = TOOLS.map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,

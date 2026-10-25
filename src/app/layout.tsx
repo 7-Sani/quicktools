@@ -21,7 +21,9 @@ export const metadata: Metadata = {
     "developer tools",
     "free tools",
   ],
-  metadataBase: new URL("https://quicktools.app"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://allquicktools.netlify.app"
+  ),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

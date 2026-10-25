@@ -2,6 +2,8 @@
 
 > An all-in-one suite of 90+ fast, client-side, privacy-first online utilities for developers, designers, writers, and digital workers. Zero sign-up, zero server uploads, 100% in-browser processing.
 
+🌐 **Live URL**: [https://allquicktools.netlify.app](https://allquicktools.netlify.app)
+
 ---
 
 ## ⚡ Features
