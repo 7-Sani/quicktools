@@ -15,10 +15,20 @@
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-light: var(--accent-light);
+
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-card: var(--surface);
+  --color-muted: var(--accent-light);
+  --color-muted-foreground: var(--text-secondary);
+  --color-input: var(--border);
+  --color-ring: var(--accent);
 }
 
 /* ── LIGHT MODE (default) ──────────────────────────────────────── */
-:root {
+:root,
+[data-theme="light"] {
+  color-scheme: light;
   --bg: #F7F7F5;
   --surface: #FFFFFF;
   --text: #111111;
@@ -31,6 +41,7 @@
 
 /* ── DARK MODE ─────────────────────────────────────────────────── */
 [data-theme="dark"] {
+  color-scheme: dark;
   --bg: #111111;
   --surface: #1A1A1A;
   --text: #FFFFFF;
@@ -87,6 +98,32 @@ h1, h2, h3, h4, h5, h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
+}
+
+/* ── FORM ELEMENTS (SELECT & DROPDOWN) ─────────────────────────── */
+select {
+  color-scheme: light;
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+[data-theme="dark"] select {
+  color-scheme: dark;
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+select option,
+select optgroup {
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+[data-theme="dark"] select option,
+[data-theme="dark"] select optgroup {
+  color-scheme: dark;
+  background-color: var(--surface);
+  color: var(--text);
 }
 
 /* ── FOCUS STYLES ──────────────────────────────────────────────── */
