@@ -15,13 +15,6 @@ export default function QrCodeScannerTool() {
   const scannerInstanceRef = useRef<any>(null);
   const qrRegionId = "qr-reader-region";
 
-  // Stop camera on unmount or tab switch
-  useEffect(() => {
-    return () => {
-      stopCamera();
-    };
-  }, [activeTab]);
-
   const stopCamera = async () => {
     if (scannerInstanceRef.current && isScanning) {
       try {
@@ -33,6 +26,13 @@ export default function QrCodeScannerTool() {
       setIsScanning(false);
     }
   };
+
+  // Stop camera on unmount or tab switch
+  useEffect(() => {
+    return () => {
+      stopCamera();
+    };
+  }, [activeTab]);
 
   const startCamera = async () => {
     setErrorMsg(null);

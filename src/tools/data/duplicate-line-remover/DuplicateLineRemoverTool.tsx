@@ -48,7 +48,7 @@ export default function DuplicateLineRemoverTool() {
       };
     }
 
-    let rawLines = inputText.split(/\r?\n/);
+    const rawLines = inputText.split(/\r?\n/);
     const originalCount = rawLines.length;
 
     // Normalize lines

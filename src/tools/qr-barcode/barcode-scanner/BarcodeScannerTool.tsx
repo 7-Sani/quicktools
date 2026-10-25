@@ -16,12 +16,6 @@ export default function BarcodeScannerTool() {
   const scannerInstanceRef = useRef<any>(null);
   const barcodeRegionId = "barcode-reader-region";
 
-  useEffect(() => {
-    return () => {
-      stopCamera();
-    };
-  }, [activeTab]);
-
   const stopCamera = async () => {
     if (scannerInstanceRef.current && isScanning) {
       try {
@@ -33,6 +27,12 @@ export default function BarcodeScannerTool() {
       setIsScanning(false);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      stopCamera();
+    };
+  }, [activeTab]);
 
   const startCamera = async () => {
     setErrorMsg(null);

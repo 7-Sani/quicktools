@@ -5,7 +5,7 @@ import { ArrowRight, Star } from "lucide-react";
 import { ToolMeta } from "@/types/tool";
 import { CATEGORY_MAP } from "@/config/categories";
 import { useFavorites } from "@/hooks/useFavorites";
-import { getLucideIcon } from "@/lib/icons";
+import { LucideIcon } from "@/lib/icons";
 
 interface ToolCardProps {
   tool: ToolMeta;
@@ -13,7 +13,6 @@ interface ToolCardProps {
 
 export function ToolCard({ tool }: ToolCardProps) {
   const { isFavorite, toggleFavorite } = useFavorites();
-  const Icon = getLucideIcon(tool.icon);
   const category = CATEGORY_MAP.get(tool.category);
   const favorite = isFavorite(tool.slug);
 
@@ -41,7 +40,7 @@ export function ToolCard({ tool }: ToolCardProps) {
           className="w-10 h-10 flex items-center justify-center neo-border rounded-lg mb-4"
           style={{ backgroundColor: category?.color + "15" }}
         >
-          <Icon size={20} />
+          <LucideIcon name={tool.icon} size={20} />
         </div>
 
         {/* Name + Arrow */}

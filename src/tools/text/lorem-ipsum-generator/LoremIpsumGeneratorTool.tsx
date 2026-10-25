@@ -11,7 +11,7 @@ export default function LoremIpsumGeneratorTool() {
   const [copied, setCopied] = useState(false);
 
   const generateWords = (num: number, startFirst = false) => {
-    let result = [];
+    const result = [];
     if (startFirst && num >= 5) {
       result.push("Lorem", "ipsum", "dolor", "sit", "amet,");
       num -= 5;
@@ -31,7 +31,7 @@ export default function LoremIpsumGeneratorTool() {
 
   const generateParagraph = (startFirst = false) => {
     const sentenceCount = Math.floor(Math.random() * 4) + 4;
-    let sentences = [];
+    const sentences = [];
     for (let i = 0; i < sentenceCount; i++) {
       sentences.push(generateSentence(startFirst && i === 0));
     }
@@ -39,7 +39,7 @@ export default function LoremIpsumGeneratorTool() {
   };
 
   const handleGenerate = () => {
-    let result = [];
+    const result = [];
     for (let i = 0; i < count; i++) {
       const isFirst = i === 0 && startWithLorem;
       if (type === 'paragraphs') result.push(generateParagraph(isFirst));
@@ -87,7 +87,7 @@ export default function LoremIpsumGeneratorTool() {
         <div className="flex items-center gap-2 mt-6">
           <label className="flex items-center gap-2 cursor-pointer font-semibold">
             <input type="checkbox" checked={startWithLorem} onChange={(e) => setStartWithLorem(e.target.checked)} className="w-5 h-5 border-2 border-border" />
-            Start with 'Lorem ipsum...'
+            Start with &apos;Lorem ipsum...&apos;
           </label>
         </div>
         <div className="mt-6 ml-auto">

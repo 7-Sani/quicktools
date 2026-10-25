@@ -288,7 +288,7 @@ export class SimpleGifEncoder {
     };
 
     // Dictionary using map
-    let dict = new Map<string, number>();
+    const dict = new Map<string, number>();
     const resetDict = () => {
       dict.clear();
       for (let i = 0; i < clearCode; i++) {
