@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuickTools — Simple Tools. Fast Results.
 
-## Getting Started
+> An all-in-one suite of 90+ fast, client-side, privacy-first online utilities for developers, designers, writers, and digital workers. Zero sign-up, zero server uploads, 100% in-browser processing.
 
-First, run the development server:
+---
+
+## ⚡ Features
+
+- **🔒 100% Private & Client-Side**: All file compression, format conversions, cryptographic hashing, and code transformations run directly in the browser. Your data never leaves your device.
+- **⚡ Instant Performance**: No waiting for server queues or uploads.
+- **🛠️ 90+ Utilities Across Multiple Categories**:
+  - **Images**: Image Compressor, Resizer, Cropper, SVG Optimizer, WebP Converter, Favicon Generator, and more.
+  - **PDFs**: PDF Merger, Splitter, Page Extractor, and Document Viewer.
+  - **Color & Design**: Color Picker, Palette Generator, Contrast Checker (WCAG), CSS Gradient/Shadow/Border Generators.
+  - **Code & Data**: JSON / CSV / XML / YAML Converters, Formatters, Minifiers, and Diff Viewers.
+  - **Security**: Password Generator, UUID v4/v7 Generator, Checksum Calculator (MD5/SHA-256), Base64 & JWT Inspector.
+  - **Web & SEO**: Meta Tag Builder, Sitemap Generator, Robots.txt Generator, URL Parser, and SERP Preview.
+  - **Audio & Video**: Format Converters, Audio Trimmer, Video-to-GIF, and Video Trimmer.
+- **🎨 Neo-Brutalist Aesthetic**: Clean, responsive layout with high contrast, dark mode support, and micro-interactions.
+- **📱 Fully Responsive**: Optimized for desktop, tablet, and mobile browsers.
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org) (App Router, Turbopack)
+- **Library**: [React 19](https://react.dev) & TypeScript
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com)
+- **Icons**: [Lucide React](https://lucide.dev)
+- **Editor**: [CodeMirror 6](https://codemirror.net)
+- **Client Processing**: WebAssembly, Canvas API, `browser-image-compression`, `pdf-lib`, `jszip`, `hash-wasm`
+
+---
+
+## 💻 Local Development
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/7-Sani/quicktools.git
+cd quicktools
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT © [QuickTools](https://quicktools.app)
